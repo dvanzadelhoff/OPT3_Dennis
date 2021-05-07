@@ -3,7 +3,7 @@ package com.company;
 public class Software {
 
     //een overzicht met alle geblokkeerde apps
-    private String blockedApp;
+    private String blockedApp = "";
 
     //houd het aantal geblokkeerde apps bij
     private int countBlockedApps;
@@ -17,9 +17,9 @@ public class Software {
     }
 
     //blokkeer een app
-    public void blockApp()
+    public void blockApp(String appName)
     {
-
+        blockedApp += appName + " ";
     }
 
     //maak de lijst met geblokkeerde apps leeg

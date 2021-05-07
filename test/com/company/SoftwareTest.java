@@ -8,6 +8,13 @@ public class SoftwareTest {
 
     @Test
     public void blockApp() {
+        Software s1 = new Software();
+        assertEquals("", s1.getBlockedApp());
+
+        Software s2 = new Software();
+        s2.blockApp("Steam");
+        s2.blockApp("Word");
+        assertEquals("Steam Word ", s2.getBlockedApp());
     }
 
     @Test
