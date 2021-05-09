@@ -11,9 +11,9 @@ public class Software {
     //dit houd bij of de software gebruikt word door iemand met een pro of een trial licence
     private boolean hasProLicence;
 
-    public Software()
+    public Software(boolean hasProLicence)
     {
-
+        this.hasProLicence = hasProLicence;
     }
 
     //blokkeer een app
