@@ -39,5 +39,27 @@ public class Users {
 
     public Double berekenPrijs() {
 
+        Double prijs = 5.0;
+
+        if (versie = true)
+        {
+            prijs = 10.0;
+
+            if (leeftijd <= 21)
+            {
+                prijs = 8.0;
+            }
+            else if(leeftijd >= 65)
+            {
+                prijs = 9.0;
+            }
+        }
+
+        if (systeem == "MacOs")
+        {
+            prijs = prijs + 3.0;
+        }
+
+        return prijs;
     }
 }
