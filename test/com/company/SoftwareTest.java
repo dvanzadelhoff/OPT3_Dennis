@@ -19,7 +19,10 @@ public class SoftwareTest {
 
     @Test
     public void clearBlockedApp() {
-        //hgdhfgdjhfgdhjgfjsgfhj
+        Software s1 = new Software();
+        s1.blockApp("Porn");
+        s1.clearBlockedApp();
+        assertEquals("", s1.getBlockedApp());
     }
 
     @Test

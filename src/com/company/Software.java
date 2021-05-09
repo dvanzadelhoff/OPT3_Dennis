@@ -25,7 +25,7 @@ public class Software {
     //maak de lijst met geblokkeerde apps leeg
     public void clearBlockedApp()
     {
-
+        blockedApp = "";
     }
 
     //laat de geblokkeerde apps zien
