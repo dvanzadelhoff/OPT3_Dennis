@@ -26,11 +26,8 @@ public class SoftwareTest {
     }
 
     @Test
-    public void getBlockedApp() {
-    }
-
-    @Test
     public void getCountBlockedApps() {
+
     }
 
     @Test
