@@ -19,8 +19,15 @@ public class Software {
     //blokkeer een app
     public void blockApp(String appName)
     {
-        blockedApp += appName + " ";
-        countBlockedApps++;
+        if (!this.hasProLicence && this.countBlockedApps >= 5)
+        {
+            blockedApp += "-Upgrade to a Pro licence- ";
+        }
+
+        else {
+            blockedApp += appName + " ";
+            countBlockedApps++;
+        }
     }
 
     //maak de lijst met geblokkeerde apps leeg

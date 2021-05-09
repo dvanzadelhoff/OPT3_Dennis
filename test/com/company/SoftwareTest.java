@@ -6,12 +6,13 @@ import static org.junit.Assert.*;
 
 public class SoftwareTest {
 
+    Software s1 = new Software(true);
+
     @Test
     public void blockApp() {
-        Software s1 = new Software();
         assertEquals("", s1.getBlockedApp());
 
-        Software s2 = new Software();
+        Software s2 = new Software(true);
         s2.blockApp("Steam");
         s2.blockApp("Word");
         assertEquals("Steam Word ", s2.getBlockedApp());
@@ -19,7 +20,6 @@ public class SoftwareTest {
 
     @Test
     public void clearBlockedApp() {
-        Software s1 = new Software();
         s1.blockApp("Porn");
         s1.clearBlockedApp();
         assertEquals("", s1.getBlockedApp());
@@ -27,14 +27,23 @@ public class SoftwareTest {
 
     @Test
     public void getCountBlockedApps() {
-        Software s1 = new Software();
         s1.blockApp("DOOM");
         s1.blockApp("GTA-V");
         assertEquals(2, s1.getCountBlockedApps());
     }
 
     @Test
-    public void getHasProlicence() {
+    public  void licenceTest()
+    {
+        Software s2 = new Software(false);
 
+        s2.blockApp("Steam");
+        s2.blockApp("Word");
+        s2.blockApp("DOOM");
+        s2.blockApp("Quake");
+        s2.blockApp("Twitch");
+        s2.blockApp("Spotify");
+
+        assertEquals("Steam Word DOOM Quake Twitch -Upgrade to a Pro licence- ", s2.getBlockedApp());
     }
 }
