@@ -27,7 +27,10 @@ public class SoftwareTest {
 
     @Test
     public void getCountBlockedApps() {
-
+        Software s1 = new Software();
+        s1.blockApp("DOOM");
+        s1.blockApp("GTA-V");
+        assertEquals(2, s1.getCountBlockedApps());
     }
 
     @Test
