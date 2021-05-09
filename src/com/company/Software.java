@@ -20,12 +20,14 @@ public class Software {
     public void blockApp(String appName)
     {
         blockedApp += appName + " ";
+        countBlockedApps++;
     }
 
     //maak de lijst met geblokkeerde apps leeg
     public void clearBlockedApp()
     {
         blockedApp = "";
+        countBlockedApps = 0;
     }
 
     //laat de geblokkeerde apps zien
@@ -37,7 +39,7 @@ public class Software {
     //geeft het aantal geblokkeerde app weer
     public int getCountBlockedApps()
     {
-        return 0;
+        return this.countBlockedApps;
     }
 
     //geeft weer of de licence pro is of niet
