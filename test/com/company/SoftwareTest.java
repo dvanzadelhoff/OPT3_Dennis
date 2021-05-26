@@ -33,7 +33,7 @@ public class SoftwareTest {
     }
 
     @Test
-    public  void licenceTest()
+    public void licenceTest()
     {
         Software s2 = new Software(false);
 
