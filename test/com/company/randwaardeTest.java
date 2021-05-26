@@ -29,6 +29,9 @@ public class randwaardeTest
         Software p22 = new Software(true, 22);
         assertEquals(10.0, p22.berekenAanschafPrijs(), 0.001);
 
+        Software p40 = new Software(true, 40);
+        assertEquals(10.0, p40.berekenAanschafPrijs(), 0.001);
+
         Software p64 = new Software(true, 64);
         assertEquals(10.0, p64.berekenAanschafPrijs(), 0.001);
 
