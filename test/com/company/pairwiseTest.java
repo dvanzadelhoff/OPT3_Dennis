@@ -1,7 +1,14 @@
 package com.company;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class pairwiseTest extends TestCase {
+import static org.junit.Assert.*;
 
+public class pairwiseTest
+{
+    @Test
+    public void pairwiseTesting()
+    {
+
+    }
 }
