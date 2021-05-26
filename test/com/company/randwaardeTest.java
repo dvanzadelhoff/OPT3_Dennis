@@ -5,7 +5,8 @@ import junit.framework.TestCase;
 
 import static org.junit.Assert.*;
 
-public class randwaardeTest extends TestCase {
+public class randwaardeTest extends TestCase
+{
 
 
 

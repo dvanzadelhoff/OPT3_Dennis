@@ -6,13 +6,13 @@ import static org.junit.Assert.*;
 
 public class SoftwareTest {
 
-    Software s1 = new Software(true);
+    Software s1 = new Software(true, 25);
 
     @Test
     public void blockApp() {
         assertEquals("", s1.getBlockedApp());
 
-        Software s2 = new Software(true);
+        Software s2 = new Software(true, 25);
         s2.blockApp("Steam");
         s2.blockApp("Word");
         assertEquals("Steam Word ", s2.getBlockedApp());
@@ -35,7 +35,7 @@ public class SoftwareTest {
     @Test
     public void licenceTest()
     {
-        Software s2 = new Software(false);
+        Software s2 = new Software(false, 25);
 
         s2.blockApp("Steam");
         s2.blockApp("Word");

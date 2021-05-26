@@ -11,9 +11,14 @@ public class Software {
     //dit houd bij of de software gebruikt word door iemand met een pro of een trial licence
     private boolean hasProLicence;
 
-    public Software(boolean hasProLicence)
+    private int AanschafLeeftijd;
+
+    public Software(boolean hasProLicence, int aanschafLeeftijd)
     {
+
         this.hasProLicence = hasProLicence;
+        this.AanschafLeeftijd = aanschafLeeftijd;
+
     }
 
     //blokkeer een app
@@ -43,6 +48,30 @@ public class Software {
         return this.blockedApp;
     }
 
+    public double berekenAanschafPrijs()
+    {
+        if (this.getHasProlicence())
+        {
+            double prijs = 10.0;
+
+            if (this.getAanschafLeeftijd() <= 21)
+            {
+                return prijs - 2.0;
+            }
+
+            else if (this.getAanschafLeeftijd() >= 65)
+            {
+                return prijs - 1.0;
+            }
+
+            return prijs;
+        }
+        else
+        {
+            return 5.0;
+        }
+    }
+
     //geeft het aantal geblokkeerde app weer
     public int getCountBlockedApps()
     {
@@ -53,6 +82,11 @@ public class Software {
     public boolean getHasProlicence()
     {
         return this.hasProLicence;
+    }
+
+    public int getAanschafLeeftijd()
+    {
+        return this.AanschafLeeftijd;
     }
 
 }
