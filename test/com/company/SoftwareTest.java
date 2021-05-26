@@ -35,15 +35,42 @@ public class SoftwareTest {
     @Test
     public void licenceTest()
     {
-        Software s2 = new Software(false, 25);
+        Software t011 = new Software(true, 25);
+        t011.blockApp("Steam");
+        t011.blockApp("Word");
+        t011.blockApp("DOOM");
+        t011.blockApp("Quake");
+        t011.blockApp("Twitch");
+        t011.blockApp("Spotify");
 
-        s2.blockApp("Steam");
-        s2.blockApp("Word");
-        s2.blockApp("DOOM");
-        s2.blockApp("Quake");
-        s2.blockApp("Twitch");
-        s2.blockApp("Spotify");
+        assertEquals("Steam Word DOOM Quake Twitch Spotify ", t011.getBlockedApp());
 
-        assertEquals("Steam Word DOOM Quake Twitch -Upgrade to a Pro licence- ", s2.getBlockedApp());
+        Software t101 = new Software(false, 25);
+        t101.blockApp("Steam");
+        t101.blockApp("Word");
+        t101.blockApp("DOOM");
+
+        assertEquals("Steam Word DOOM ", t101.getBlockedApp());
+
+        Software t110 = new Software(false, 25);
+        t110.blockApp("Steam");
+        t110.blockApp("Word");
+        t110.blockApp("DOOM");
+        t110.blockApp("Quake");
+        t110.blockApp("Twitch");
+
+        t110.clearBlockedApp();
+
+        assertEquals("", t110.getBlockedApp());
+
+        Software t111 = new Software(false, 25);
+        t111.blockApp("Steam");
+        t111.blockApp("Word");
+        t111.blockApp("DOOM");
+        t111.blockApp("Quake");
+        t111.blockApp("Twitch");
+        t111.blockApp("Spotify");
+
+        assertEquals("Steam Word DOOM Quake Twitch -Upgrade to a Pro licence- ", t111.getBlockedApp());
     }
 }
